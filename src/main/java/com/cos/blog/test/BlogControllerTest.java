@@ -1,7 +1,7 @@
 //스프링이 IoC(제어의 역전)를 할때 스캔을 하는데 기본값이 com.cos.blog의 이하를 스캔후 heap영역에다가 올려준다
 package com.cos.blog.test;
 
-import org.springframework.stereotype.Controller;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class BlogControllerTest {
 	
 	//http://localhost:8080/test/hello
-	@GetMapping("/test/hello")
+	@GetMapping("/test/hello") 
 	public String hello() {
 		return "<h1>hello spring boot</h1>";
 	}

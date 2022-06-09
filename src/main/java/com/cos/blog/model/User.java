@@ -39,12 +39,13 @@ public class User {
 	private String password; //비밀번호
 	
 	@Column(nullable = false, length = 50) 
-	private String email;// myEmail, my_email
+	private String name;
 	
-	//@ColumnDefault("user")
-	// BD는 RoleType이라는 것이 없다
+	@Column(nullable = false, length = 1000) 
+	private String time;
+	
 	@Enumerated(EnumType.STRING)  
-	private  RoleType role; //Enum을 쓰는게 좋다. // ADMIN,USER
+	private  RoleType role; 
 	
 	@CreationTimestamp //시간이 자동으로 입력
 	private Timestamp createDate;

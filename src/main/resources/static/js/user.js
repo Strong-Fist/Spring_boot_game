@@ -1,6 +1,6 @@
 let index= {
 		init:function(){
-			$("#btn-save").on("click", ()=>{ // function(){}, ()=>{} this를 바인딩하기 위해서!!
+			$("#btn-save").on("click", ()=>{ // function(){}, ()=>{} this를 바인딩하기 위해서!! //$식별자 기호 객체라고 인식을 위한 기호이다
 				this.save();
 			}); 
 		},
@@ -8,7 +8,7 @@ let index= {
     save: function() {
         //alert('user의 save함수 호출됨');
         let data = {
-				username:$("#username").val(),
+				username:$("#username").val(), //어떠한 양식의 데이터를 가져올때 사용
 				password:$("#password").val(),
 				email:$("#email").val()
 			};

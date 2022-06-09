@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 		
 		private static final String TAG= "HttpController Test : ";
 		
-		@GetMapping("/http/lombok")
+		@GetMapping("/http/lombok") 
 		public String lombokTest() {
 			Member m = Member.builder().username("ssar").email("ssar@nate.com").password("1234").build();
 			System.out.println(TAG+"getter : "+ m.getUsername());
@@ -26,7 +26,7 @@ import org.springframework.web.bind.annotation.RestController;
 //	
 		//웹브라우져에서는 Get방식밖에 안됨
 		//http://localhost:8080/http/get (select)
-		@GetMapping("/http/get")
+		@GetMapping("/auth/http/get")
 		public String getTest(Member m) { //id=1&username=ssar&password=1234&email=ssar@naver.com
 			return "get 요청" + m.getId() + "," + m.getUsername() +","   + m.getPassword() + "," + m.getEmail(); 
 			// @RequstParam은 하나씩만 받을수 있다 ex) @RequestParam int id, @RequestParam String username

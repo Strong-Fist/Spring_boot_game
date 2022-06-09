@@ -11,14 +11,24 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class UserController {
 	
 	@GetMapping("/auth/joinForm")
-	public String joinForm(){
-		
+	public String joinForm(){ 
+		   
 		return "user/joinForm";
 	}
 	
-	@GetMapping("/auth/loginForm")
-	public String loginForm(){
-		
-		return "user/loginForm";
+	@GetMapping("/auth/loginForm")  
+	public String loginForm(){   
+		    
+		return "user/loginForm"; 
+	}
+	
+	@GetMapping("/game/start")
+	public String start() {   
+		return "game/start";
+	}
+	
+	@GetMapping("/game/way")
+	public String way() {   
+		return "game/way";
 	}
 }
